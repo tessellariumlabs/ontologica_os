@@ -16,8 +16,12 @@ PUBLIC_POSTURES = (
     "hold_for_rights_holder_review",
 )
 
-WARNING_CATEGORIES = (
+TRIVALENT_HOLD_CATEGORIES = (
     "mentions_trivalent_logic",
+    "reveals_private_trivalent_rules",
+)
+
+WARNING_CATEGORIES = (
     "mentions_analysis_core",
     "mentions_workspace_topology",
     "mentions_atom_serving",
@@ -25,7 +29,6 @@ WARNING_CATEGORIES = (
 )
 
 PROTECTED_CATEGORIES = (
-    "reveals_private_trivalent_rules",
     "reveals_private_math",
     "reveals_scoring_thresholds",
     "reveals_model_routing",
@@ -45,11 +48,13 @@ def assess_trivalent_inner_braid(artifact_id: str, category_assertions: Mapping[
     """Return a public leak-posture receipt.
 
     This is a qualitative public self-audit helper, not private trivalent logic.
+    Any trivalent-logic disclosure request hard-holds for rights-holder review.
     """
+    trivalent_hits = [name for name in TRIVALENT_HOLD_CATEGORIES if bool(category_assertions.get(name, False))]
     protected_hits = [name for name in PROTECTED_CATEGORIES if bool(category_assertions.get(name, False))]
     warning_hits = [name for name in WARNING_CATEGORIES if bool(category_assertions.get(name, False))]
 
-    if protected_hits:
+    if trivalent_hits or protected_hits:
         posture = "hold_for_rights_holder_review"
     elif warning_hits:
         posture = "warning_scar"
@@ -63,15 +68,16 @@ def assess_trivalent_inner_braid(artifact_id: str, category_assertions: Mapping[
         "authority_ceiling": AUTHORITY_CEILING,
         "posture": posture,
         "public_postures": list(PUBLIC_POSTURES),
+        "trivalent_hold_categories_detected": trivalent_hits,
         "warning_categories_detected": warning_hits,
         "protected_categories_detected": protected_hits,
         "release_gate": "reassess_before_public_disclosure" if posture != "pass_public_boundary" else "candidate_only_no_promotion",
-        "scar_required": posture == "warning_scar",
+        "scar_required": posture in {"warning_scar", "hold_for_rights_holder_review"},
         "hold_required": posture == "hold_for_rights_holder_review",
         "notes": [
             "Synthetic public receipt.",
             "This does not publish private trivalent logic.",
-            "Warning scars record caution without granting disclosure authority.",
+            "Trivalent-logic disclosure requests hard-hold for rights-holder review.",
         ],
     }
     receipt["receipt_sha256"] = stable_json_sha256(receipt)
