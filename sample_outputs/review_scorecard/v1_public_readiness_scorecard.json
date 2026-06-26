@@ -1,0 +1,56 @@
+{
+  "scorecard_id": "v1_public_readiness_scorecard",
+  "schema_version": "toy.public_readiness.v1",
+  "status": "noncanonical",
+  "authority_ceiling": "candidate_only",
+  "scoring_type": "public_reviewer_readiness",
+  "target_delta": {
+    "from_band": 2,
+    "from_label": "bounded",
+    "to_band": 4,
+    "to_label": "reviewable",
+    "delta_bands": 2
+  },
+  "dimension_scores": [
+    {
+      "dimension": "product_legibility",
+      "before_band": 2,
+      "after_band": 4,
+      "delta": 2
+    },
+    {
+      "dimension": "proof_lane",
+      "before_band": 2,
+      "after_band": 4,
+      "delta": 2
+    },
+    {
+      "dimension": "anti_leak_critic",
+      "before_band": 1,
+      "after_band": 4,
+      "delta": 3
+    },
+    {
+      "dimension": "reviewer_path",
+      "before_band": 1,
+      "after_band": 4,
+      "delta": 3
+    }
+  ],
+  "aggregate_public_band": {
+    "band": 4,
+    "label": "reviewable",
+    "status": "hold_for_rights_holder_final_gate"
+  },
+  "anti_leak_assertions": {
+    "contains_private_math": false,
+    "contains_private_scoring": false,
+    "contains_private_routing": false,
+    "contains_real_manifest_lineage": false,
+    "contains_real_receipts": false,
+    "contains_runtime_authority": false,
+    "contains_hardware_authority": false,
+    "exports_production_capability": false
+  },
+  "validity_rule": "Improvement is valid only when understandability increases without capability export."
+}
