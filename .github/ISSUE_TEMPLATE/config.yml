@@ -1,8 +1,0 @@
-blank_issues_enabled: false
-contact_links:
-  - name: Commercial, research, or collaboration inquiry
-    url: https://github.com/tessellariumlabs/ontologica_os/issues/new?template=collaboration_inquiry.yml
-    about: Use the collaboration inquiry template for non-sensitive permission requests.
-  - name: Boundary or rights question
-    url: https://github.com/tessellariumlabs/ontologica_os/issues/new?template=boundary_question.yml
-    about: Ask a non-sensitive question about public scope, rights, or noncanonical boundaries.
