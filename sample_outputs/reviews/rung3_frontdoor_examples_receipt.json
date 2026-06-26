@@ -1,0 +1,47 @@
+{
+  "receipt_id": "rung3_frontdoor_examples_2026_06_26_001",
+  "receipt_type": "development_ladder_receipt",
+  "status": "rung3_examples_landed",
+  "authority_ceiling": "candidate_only",
+  "rung": {
+    "number": 3,
+    "label": "frontdoor examples"
+  },
+  "emphera": {
+    "packet": "examples/branch_sprawl_packet.md",
+    "disclosure_critic": "sample_outputs/reviews/branch_sprawl_disclosure_critic_receipt.json",
+    "release_report": "sample_outputs/reports/branch_sprawl_release_report.md",
+    "final_gate": "hold_for_review"
+  },
+  "ontologica_forge": {
+    "packet": "examples/worldbuilder_campaign_packet.md",
+    "disclosure_critic": "sample_outputs/reviews/worldbuilder_campaign_disclosure_critic_receipt.json",
+    "release_report": "sample_outputs/reports/worldbuilder_campaign_release_report.md",
+    "final_gate": "hold_for_review"
+  },
+  "anti_leak_assertions": {
+    "private_source_exported": false,
+    "private_runtime_internals_exported": false,
+    "private_campaign_corpus_exported": false,
+    "private_branch_topology_exported": false,
+    "private_merge_logic_exported": false,
+    "private_scoring_exported": false,
+    "hardware_authority_granted": false,
+    "production_authority_granted": false
+  },
+  "next_rung": {
+    "number": 4,
+    "label": "backroom intake packets",
+    "targets": [
+      "Emphera OS intake packet example",
+      "local-loom runtime-spine intake packet example",
+      "tessera-builder build packet example"
+    ]
+  },
+  "decision": "rung3_frontdoor_examples_complete_with_hold",
+  "notes": [
+    "Both public frontdoor examples remain synthetic and noncanonical.",
+    "Both release reports hold for human review.",
+    "No release or production authority is granted."
+  ]
+}
