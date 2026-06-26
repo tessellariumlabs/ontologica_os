@@ -1,0 +1,12 @@
+{
+  "receipt_id": "public_surface_clearance_2026_06_26_001",
+  "status": "reviewed",
+  "authority_ceiling": "candidate_only",
+  "decision": "overview_language_revised",
+  "release_gate": "manual_review_required",
+  "notes": [
+    "README overview was revised to neutral public product language.",
+    "The reserved boundary remains active for future changes.",
+    "This receipt does not grant production authority or public release approval."
+  ]
+}
