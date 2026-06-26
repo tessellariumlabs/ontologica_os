@@ -1,0 +1,32 @@
+[
+  {
+    "id": "tessera.prior.operator_choice",
+    "label": "operator choice",
+    "fields": {
+      "novelty": 0.45,
+      "risk": 0.2,
+      "coherence": 0.88,
+      "embodiment": 0.55
+    }
+  },
+  {
+    "id": "tessera.prior.surface_preview",
+    "label": "surface preview",
+    "fields": {
+      "novelty": 0.32,
+      "risk": 0.18,
+      "coherence": 0.91,
+      "embodiment": 0.72
+    }
+  },
+  {
+    "id": "tessera.prior.memory_mark",
+    "label": "candidate memory mark",
+    "fields": {
+      "novelty": 0.28,
+      "risk": 0.12,
+      "coherence": 0.93,
+      "embodiment": 0.5
+    }
+  }
+]
