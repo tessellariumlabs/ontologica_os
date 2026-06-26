@@ -1,0 +1,51 @@
+{
+  "receipt_id": "ecosystem_kernel_direction_validation_2026_06_26_001",
+  "receipt_type": "strategy_validation_receipt",
+  "status": "validated_direction_not_production_authority",
+  "authority_ceiling": "candidate_only",
+  "validated_repositories": [
+    "ontologica_os",
+    "emphera",
+    "emphera-os",
+    "Ontologica-Forge",
+    "tessera-builder",
+    "tessera",
+    "local-loom",
+    "shardbench"
+  ],
+  "direction": {
+    "ontologica_os": "proofing lane and disclosure boundary compiler",
+    "emphera": "public branch-sprawl and analytics frontdoor",
+    "emphera_os": "deeper consolidation operating layer",
+    "ontologica_forge": "shared worldbuilder and campaign frontdoor",
+    "tessera_builder": "backroom builder lane for Tessera-targeted candidates",
+    "tessera": "physical tabletop OS and embodied-kernel target",
+    "local_loom": "private runtime OS spine lane",
+    "shardbench": "ontology shard, grammar surface, route, scar, and pearl workbench"
+  },
+  "validation_result": {
+    "direction_is_good": true,
+    "reason": "Each repository has a narrow kernel role, explicit intake gate, and separated authority boundary.",
+    "release_authority_granted": false,
+    "production_authority_granted": false,
+    "hardware_authority_granted": false
+  },
+  "required_common_gate": {
+    "proof_packet": "present",
+    "disclosure_critic": "present",
+    "protected_terms_review": "present",
+    "source_repository": "declared",
+    "target_repository": "declared",
+    "human_review": "required",
+    "final_gate": "hold / review / deny"
+  },
+  "risk_controls": {
+    "repo_sprawl_control": "each repo must preserve one kernel role",
+    "frontdoor_backroom_control": "public surfaces cannot ingest private material directly",
+    "embodiment_control": "no public packet grants hardware or actuator authority",
+    "runtime_control": "local-loom remains candidate-only with no runtime authority",
+    "shard_control": "shardbench stores review material without automatic runtime promotion"
+  },
+  "decision": "good_direction_for_system",
+  "next_gate": "human review before production or visibility changes"
+}
