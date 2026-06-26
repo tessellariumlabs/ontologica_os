@@ -1,0 +1,70 @@
+{
+  "ledger_id": "ordered_trivalent_commit_ledger_2026_06_26_001",
+  "authority_ceiling": "candidate_only",
+  "status": "noncanonical",
+  "purpose": "preserve commit order for the trivalent hard-hold proof loop",
+  "ordered_commits": [
+    {
+      "order": 1,
+      "sha": "80fa17fcec49993a6db52964e61c4d7a9b5ee5b1",
+      "meaning": "product identity: local ontology proofing lane"
+    },
+    {
+      "order": 2,
+      "sha": "5b8fea16a543bd56093b5c8c8b05298cf182885d",
+      "meaning": "initial trivalent public boundary"
+    },
+    {
+      "order": 3,
+      "sha": "61086edc8edf0212066926df89a4002acd6cfcd6",
+      "meaning": "public posture helper"
+    },
+    {
+      "order": 4,
+      "sha": "51dd88c111292483a2b0a97c268d65c974b75da2",
+      "meaning": "initial caution scar"
+    },
+    {
+      "order": 5,
+      "sha": "430d241ef75c6680d330efe9380bcf0fc4d0fe5c",
+      "meaning": "braided loop score receipt"
+    },
+    {
+      "order": 6,
+      "sha": "5c1d54e8fc89e4850fe86d27cb00ce353837afc3",
+      "meaning": "public release reassessment"
+    },
+    {
+      "order": 7,
+      "sha": "32125216ee6464d0f1060b44fa4e2564f12f7048",
+      "meaning": "maintainer rule for scar posture"
+    },
+    {
+      "order": 8,
+      "sha": "f2f4fe9b221699f167e618d7a95b191e558da904",
+      "meaning": "documentation tightened to hard hold"
+    },
+    {
+      "order": 9,
+      "sha": "ace6cc2a141b14dcd03983f1541c0b22b2f4e58b",
+      "meaning": "helper tightened to hard hold"
+    },
+    {
+      "order": 10,
+      "sha": "e332545a9aa95b6a2222e5e225b880cc368ca4f3",
+      "meaning": "hard-hold receipt added"
+    }
+  ],
+  "final_rule": {
+    "posture": "hold_for_rights_holder_review",
+    "authority_ceiling": "candidate_only",
+    "public_release": "hold"
+  },
+  "anti_leak_assertion": {
+    "private_logic_exported": false,
+    "private_scoring_exported": false,
+    "private_routing_exported": false,
+    "private_math_exported": false,
+    "private_graph_exported": false
+  }
+}
