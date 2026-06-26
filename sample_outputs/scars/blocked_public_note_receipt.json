@@ -1,0 +1,13 @@
+{
+  "receipt_id": "blocked_public_note_receipt_001",
+  "status": "recorded",
+  "authority_ceiling": "candidate_only",
+  "event": "A richer public note was not added by the connector.",
+  "replacement": "A narrower public warning category was added instead.",
+  "decision": "hold_for_rights_holder_review",
+  "notes": [
+    "Keep reserved logic private.",
+    "Only category-level public warning is allowed.",
+    "Manual review is required before public release."
+  ]
+}
