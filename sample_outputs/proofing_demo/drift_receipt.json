@@ -1,0 +1,42 @@
+{
+  "authority_ceiling": "candidate_only",
+  "candidate_manifest": "toy_manifest_candidate",
+  "candidate_manifest_sha256": "48e0db9e71fe542915babe0b0dec2ae2afcd1ff2ef8005716222e5418bf1ad2e",
+  "checks": {
+    "authority_drift": "pass",
+    "projection_drift": "warn",
+    "receipt_completeness": "pass",
+    "schema_drift": "pass"
+  },
+  "decision": "warn",
+  "drift": {
+    "candidate_vector": [
+      0.39,
+      0.203333,
+      0.88,
+      0.623333
+    ],
+    "dimensions": [
+      "novelty",
+      "risk",
+      "coherence",
+      "embodiment"
+    ],
+    "prior_vector": [
+      0.35,
+      0.166667,
+      0.906667,
+      0.59
+    ],
+    "projection_delta_l2": 0.069041
+  },
+  "notes": [
+    "Synthetic public receipt.",
+    "A receipt provides evidence; it does not crown truth."
+  ],
+  "prior_manifest": "toy_manifest_prior",
+  "prior_manifest_sha256": "44c60466338612583382b6905192996cf4a1d592cb43d1afda95d183dec6d392",
+  "receipt_id": "toy_drift_receipt_001",
+  "receipt_sha256": "5e1e7f8ad383df28e9c2020c96c37ad784e4bac89efaa27fa41a9ffc17c61c56",
+  "receipt_type": "drift_guard"
+}
