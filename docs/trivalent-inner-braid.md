@@ -10,7 +10,7 @@ The trivalent inner braid exists to test whether the repository can hold its own
 
 It asks:
 
-> Can a proposed public artifact be classified as safe, warning-bearing, or protected-hold without revealing the private logic that would make that assessment in a real system?
+> Can a proposed public artifact be classified as safe or protected-hold without revealing the private logic that would make that assessment in a real system?
 
 ## Public Postures
 
@@ -21,13 +21,26 @@ pass_public_boundary
   The artifact appears to stay within public vocabulary and proof posture.
 
 warning_scar
-  The artifact appears safe enough to record as public evidence, but it carries a warning that must be reviewed before disclosure or public release.
+  The artifact is not trivalent-specific, but it gestures toward a protected category and needs a durable caution receipt before any public release.
 
 hold_for_rights_holder_review
-  The artifact may expose protected categories or operational machinery. It must be held.
+  The artifact mentions trivalent logic or may expose protected categories or operational machinery. It must be held.
 ```
 
 These are public review labels, not a private trivalent logic system.
+
+## Hard Rule For Trivalent Logic
+
+Any maintainer request that asks to expose, describe, implement, score, route, threshold, or operationalize trivalent logic must resolve to:
+
+```text
+posture: hold_for_rights_holder_review
+authority_ceiling: candidate_only
+scar_receipt: required
+public_release: blocked_until_rights_holder_review
+```
+
+Category-level mention of trivalent logic is enough to leave a scar receipt. It is not enough to publish the logic.
 
 ## Public Braid Shape
 
@@ -35,24 +48,25 @@ These are public review labels, not a private trivalent logic system.
 flowchart TD
     A[Proposed artifact] --> B[Public boundary read]
     B --> C[Category scan]
-    C --> D[Invariant check]
-    D --> E{Public posture}
-    E -- safe --> F[pass_public_boundary]
-    E -- caution --> G[warning_scar]
-    E -- protected --> H[hold_for_rights_holder_review]
+    C --> D{Mentions trivalent logic?}
+    D -- yes --> H[hold_for_rights_holder_review]
+    D -- no --> E[Invariant check]
+    E --> F{Other protected category?}
+    F -- no --> P[pass_public_boundary]
+    F -- caution --> W[warning_scar]
+    F -- protected --> H
 
-    G --> I[scar receipt]
-    H --> I
-    I --> J[reassess before public disclosure]
+    W --> S[scar receipt]
+    H --> S
+    S --> R[reassess before public disclosure]
 ```
 
 ## What Counts As Warning
 
-The public braid should leave a scar receipt when an artifact mentions or gestures toward protected categories but does not include operational machinery.
+The public braid may leave a warning scar for non-trivalent category-level references that do not include operational machinery.
 
 Examples:
 
-- category-level mention of trivalent logic
 - category-level mention of private analysis core
 - category-level mention of workspace topology
 - category-level mention of atom serving
@@ -62,10 +76,11 @@ A warning scar is not approval. It is a durable reminder to reassess before publ
 
 ## What Must Hold
 
-The public braid must hold for rights-holder review when an artifact includes operational machinery or reconstruction help.
+The public braid must hold for rights-holder review when an artifact includes trivalent logic or operational machinery.
 
 Examples:
 
+- trivalent logic as a concept to disclose
 - private trivalent rules
 - exact scoring or thresholds
 - real routing logic
@@ -81,7 +96,7 @@ A scar receipt is a synthetic, noncanonical evidence artifact that records:
 
 - artifact under review
 - review posture
-- public warning category
+- public warning or hold category
 - protected categories that remain undisclosed
 - reason for hold or warning
 - reassessment requirement
@@ -93,15 +108,8 @@ If documentation permits explanation but blocks implementation, leave a scar rec
 If a future maintainer is unsure whether a concept is safe, choose:
 
 ```text
-posture: warning_scar
-release_gate: reassess_before_public_disclosure
-authority_ceiling: candidate_only
-```
-
-If the concept appears operational or reconstructable, choose:
-
-```text
 posture: hold_for_rights_holder_review
+release_gate: reassess_before_public_disclosure
 authority_ceiling: candidate_only
 ```
 
