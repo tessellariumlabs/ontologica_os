@@ -1,0 +1,34 @@
+{
+  "authority_ceiling": "candidate_only",
+  "critic_id": "toy_disclosure_critic_001",
+  "critic_type": "protected_disclosure_review",
+  "decision": "pass_public_boundary",
+  "failed_invariants": [],
+  "input_packet": "toy_proof_packet_001",
+  "input_packet_sha256": "synthetic_packet_sha_placeholder",
+  "invariant_checks": {
+    "authority_ceiling_candidate_only": true,
+    "gate_holds_or_denies": true,
+    "implementation_rights_not_granted": true,
+    "status_noncanonical": true
+  },
+  "model_advised_keep_private": [
+    "private_math",
+    "private_analysis_core",
+    "private_scoring_or_ranking",
+    "private_model_routing",
+    "private_receipt_graph",
+    "real_manifest_lineage",
+    "private_runtime_authority",
+    "private_hardware_authority",
+    "private_workspace_topology",
+    "production_policy_engine"
+  ],
+  "notes": [
+    "Synthetic critic receipt; not an LLM call.",
+    "If protected categories appear, public release should hold for rights-holder review.",
+    "The critic explains disclosure boundaries without revealing private implementation details."
+  ],
+  "protected_categories_detected": [],
+  "critic_receipt_sha256": "synthetic_critic_receipt_sha_placeholder"
+}
