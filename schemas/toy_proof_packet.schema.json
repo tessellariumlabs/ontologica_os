@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/ontologica-os/toy_proof_packet.schema.json",
+  "title": "Toy Ontologica Proof Packet",
+  "description": "Synthetic, noncanonical proof packet shape for public Ontologica OS review.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "packet_id",
+    "schema_version",
+    "status",
+    "authority_ceiling",
+    "inputs",
+    "projections",
+    "manifests",
+    "receipt",
+    "gate_decision",
+    "boundary_assertions"
+  ],
+  "properties": {
+    "packet_id": {"type": "string"},
+    "schema_version": {"type": "string"},
+    "status": {"type": "string", "enum": ["noncanonical", "candidate_only"]},
+    "authority_ceiling": {"type": "string", "enum": ["candidate_only"]},
+    "inputs": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/artifact_ref"}
+    },
+    "projections": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/artifact_ref"}
+    },
+    "manifests": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/artifact_ref"}
+    },
+    "receipt": {"$ref": "#/$defs/artifact_ref"},
+    "gate_decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["decision", "reason"],
+      "properties": {
+        "decision": {"type": "string", "enum": ["hold_for_review", "deny"]},
+        "reason": {"type": "string"}
+      }
+    },
+    "boundary_assertions": {
+      "type": "object",
+      "additionalProperties": {"type": "boolean"}
+    }
+  },
+  "$defs": {
+    "artifact_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "path", "synthetic"],
+      "properties": {
+        "id": {"type": "string"},
+        "path": {"type": "string"},
+        "sha256": {"type": "string"},
+        "synthetic": {"type": "boolean"},
+        "notes": {"type": "string"}
+      }
+    }
+  }
+}
