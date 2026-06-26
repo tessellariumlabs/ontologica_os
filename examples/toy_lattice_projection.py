@@ -1,3 +1,7 @@
+# Noncanonical toy example.
+# Demonstrates public Ontologica OS vocabulary only.
+# Not production code; no implementation rights are granted.
+
 from __future__ import annotations
 
 from dataclasses import dataclass
