@@ -90,6 +90,25 @@ observe
 
 Protected private implementation includes feature systems, scoring and ranking, thresholds, model routing, correlation logic, promotion heuristics, and receipt graph topology.
 
+## Disclosure Critic Rule
+
+A final public proofing loop may include a disclosure critic.
+
+The disclosure critic may:
+
+- review public proof packets for boundary assertions
+- list categories that should remain undisclosed
+- emit a synthetic critic receipt
+- recommend `pass_public_boundary` or `hold_for_rights_holder_review`
+
+The disclosure critic must not:
+
+- perform a real LLM disclosure review
+- reveal private detectors or internal classification methods
+- inspect private repositories or private traces
+- infer private scoring, routing, math, manifests, or receipt graph topology
+- grant publication, implementation, runtime, hardware, or durable-truth authority
+
 ## Required Default Outcome
 
 When uncertain, choose:
