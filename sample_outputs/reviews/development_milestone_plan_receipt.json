@@ -1,0 +1,48 @@
+{
+  "receipt_id": "development_milestone_plan_2026_06_26_001",
+  "receipt_type": "planning_receipt",
+  "status": "landed_planning_artifacts",
+  "authority_ceiling": "candidate_only",
+  "artifacts": [
+    "docs/development-gantt-flow.md",
+    "docs/development-butterfly-map.md",
+    "docs/finalization-ladder.md"
+  ],
+  "planning_scope": {
+    "purpose": "climb from current kernel map to finalized project candidate",
+    "not_a_delivery_promise": true,
+    "not_release_authority": true,
+    "not_production_authority": true
+  },
+  "current_rung": {
+    "rung": 2,
+    "label": "public proofing lane established"
+  },
+  "next_focus": [
+    "Emphera public frontdoor packet example",
+    "Ontologica Forge worldbuilder packet example",
+    "Emphera OS and local-loom backroom intake packets",
+    "shardbench ontology / grammar / route packet shapes",
+    "tessera-builder and Tessera embodiment inventory gates"
+  ],
+  "required_gate": {
+    "proof_packet": "present",
+    "disclosure_critic": "present",
+    "protected_terms_review": "present",
+    "source_repository": "declared",
+    "target_repository": "declared",
+    "human_review": "required",
+    "final_gate": "hold / review / deny"
+  },
+  "anti_leak_assertion": {
+    "private_math_exported": false,
+    "private_routing_exported": false,
+    "private_scoring_exported": false,
+    "private_lineage_exported": false,
+    "hardware_authority_granted": false,
+    "runtime_authority_granted": false,
+    "production_authority_granted": false
+  },
+  "decision": "valid_planning_scaffold_for_finalization_ladder",
+  "next_gate": "human review and milestone packet examples"
+}
