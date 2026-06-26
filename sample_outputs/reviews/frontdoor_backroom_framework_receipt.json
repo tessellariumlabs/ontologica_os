@@ -1,0 +1,33 @@
+{
+  "receipt_id": "frontdoor_backroom_framework_2026_06_26_001",
+  "receipt_type": "product_scope_receipt",
+  "status": "landed",
+  "authority_ceiling": "candidate_only",
+  "frontdoor": {
+    "repository": "Emphera",
+    "role": "public frontdoor for complex agentic branch-sprawl consolidation and public-safe data analytics tooling"
+  },
+  "backroom": {
+    "repository": "Emphera OS / private consolidation surfaces",
+    "role": "human-controlled backroom for serious tooling consolidation and production hardening"
+  },
+  "proofing_lane": {
+    "repository": "Ontologica OS",
+    "role": "local ontology firewall and disclosure proofing lane between private sprint material and public-safe packets"
+  },
+  "gate": {
+    "proof_packet_required": true,
+    "disclosure_critic_required": true,
+    "protected_terms_review_required": true,
+    "human_review_required": true,
+    "default_decision": "hold_for_review"
+  },
+  "anti_leak_assertion": {
+    "private_source_exported": false,
+    "private_routing_exported": false,
+    "private_scoring_exported": false,
+    "real_private_manifests_exported": false,
+    "real_private_receipts_exported": false,
+    "production_release_process_exported": false
+  }
+}
