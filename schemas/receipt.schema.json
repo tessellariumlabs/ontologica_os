@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ontologica Public Receipt",
+  "type": "object",
+  "required": [
+    "receipt_id",
+    "receipt_type",
+    "manifest_id",
+    "checks",
+    "decision",
+    "authority_ceiling",
+    "noncanonical"
+  ],
+  "properties": {
+    "receipt_id": {"type": "string"},
+    "receipt_type": {"enum": ["projection", "manifest", "drift_guard", "promotion_gate"]},
+    "manifest_id": {"type": "string"},
+    "checks": {"type": "object"},
+    "drift": {"type": "object"},
+    "decision": {"enum": ["pass", "warn", "hold", "hold_for_review", "quarantine", "deny", "promote"]},
+    "authority_ceiling": {"enum": ["candidate_only", "review_only", "public_reference"]},
+    "noncanonical": {"const": true}
+  }
+}
