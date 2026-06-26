@@ -1,0 +1,40 @@
+{
+  "receipt_id": "v1_braided_loop_receipt",
+  "schema_version": "toy.braided_loop.v1",
+  "status": "complete_with_public_hold",
+  "authority_ceiling": "candidate_only",
+  "loop_strands": [
+    "concept",
+    "proof",
+    "critic",
+    "score"
+  ],
+  "completed_artifacts": [
+    "docs/braided-development-loop.md",
+    "docs/public-reviewer-path.md",
+    "docs/public-readiness-scorecard.md",
+    "sample_outputs/review_scorecard/v1_public_readiness_scorecard.json",
+    "docs/trivalent-boundary-warning.md",
+    "src/ontologica_os_public/category_warning.py",
+    "sample_outputs/warnings/trivalent_boundary_warning_receipt.json"
+  ],
+  "score_delta": {
+    "from_band": 2,
+    "to_band": 4,
+    "delta_bands": 2,
+    "valid": true
+  },
+  "anti_leak_result": {
+    "private_math_exposed": false,
+    "private_scoring_exposed": false,
+    "private_routing_exposed": false,
+    "real_lineage_exposed": false,
+    "trivalent_category_warning_receipted": true
+  },
+  "decision": "hold_for_rights_holder_final_gate",
+  "notes": [
+    "The loop improves public reviewability without granting production authority.",
+    "The trivalent boundary is represented as a warning category only.",
+    "No protected trivalent logic is explained."
+  ]
+}
