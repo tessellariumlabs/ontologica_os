@@ -23,7 +23,7 @@ The rights holder may consider:
 
 ## Contact
 
-Use the contact path published by Tessellarium Labs or the rights holder. Before public release, replace this line with the preferred contact address.
+Use the contact path published by Tessellarium Labs or the rights holder. https://www.linkedin.com/in/mydude
 
 No rights are granted unless confirmed in a signed written agreement.
 
