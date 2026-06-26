@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "Ontologica OS"
+message: "If you cite this source-visible public lens, cite it as Ontologica OS and preserve the rights-reserved boundary."
+type: software
+authors:
+  - name: "Tessellarium Labs"
+year: 2026
+repository-code: "https://github.com/tessellariumlabs/ontologica_os"
+license: "Proprietary; source-visible rights reserved; no public license"
