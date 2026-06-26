@@ -16,6 +16,19 @@ KERNEL_ID = "toy_public_math_kernel"
 KERNEL_VERSION = "1.0.0rc1"
 AUTHORITY_CEILING = "candidate_only"
 
+PROTECTED_DISCLOSURE_CATEGORIES = (
+    "private_math",
+    "private_analysis_core",
+    "private_scoring_or_ranking",
+    "private_model_routing",
+    "private_receipt_graph",
+    "real_manifest_lineage",
+    "private_runtime_authority",
+    "private_hardware_authority",
+    "private_workspace_topology",
+    "production_policy_engine",
+)
+
 
 @dataclass(frozen=True)
 class Tessera:
@@ -251,6 +264,7 @@ def build_proof_packet(
         },
         "boundary_assertions": {
             "contains_private_math": False,
+            "contains_private_analysis_core": False,
             "contains_real_manifest_lineage": False,
             "contains_real_receipts": False,
             "contains_private_routing": False,
@@ -261,6 +275,50 @@ def build_proof_packet(
     }
     packet["packet_sha256"] = stable_json_sha256(packet)
     return packet
+
+
+def build_disclosure_critic_receipt(proof_packet: Mapping[str, Any]) -> dict[str, Any]:
+    """Toy critic that checks whether a public packet should stay non-disclosed.
+
+    This is deterministic and noncanonical. It is not an LLM call.
+    """
+    assertions = dict(proof_packet.get("boundary_assertions", {}))
+    detected: list[str] = []
+
+    for category in PROTECTED_DISCLOSURE_CATEGORIES:
+        assertion_key = "contains_" + category
+        if bool(assertions.get(assertion_key, False)):
+            detected.append(category)
+
+    invariant_checks = {
+        "authority_ceiling_candidate_only": proof_packet.get("authority_ceiling") == AUTHORITY_CEILING,
+        "status_noncanonical": proof_packet.get("status") in {"noncanonical", "candidate_only"},
+        "gate_holds_or_denies": proof_packet.get("gate_decision", {}).get("decision") in {"hold_for_review", "deny"},
+        "implementation_rights_not_granted": assertions.get("grants_implementation_rights") is False,
+    }
+
+    failed_invariants = [name for name, passed in invariant_checks.items() if not passed]
+    decision = "pass_public_boundary" if not detected and not failed_invariants else "hold_for_rights_holder_review"
+
+    receipt = {
+        "critic_id": "toy_disclosure_critic_001",
+        "critic_type": "protected_disclosure_review",
+        "authority_ceiling": AUTHORITY_CEILING,
+        "input_packet": proof_packet.get("packet_id"),
+        "input_packet_sha256": proof_packet.get("packet_sha256"),
+        "decision": decision,
+        "protected_categories_detected": detected,
+        "failed_invariants": failed_invariants,
+        "invariant_checks": invariant_checks,
+        "model_advised_keep_private": list(PROTECTED_DISCLOSURE_CATEGORIES),
+        "notes": [
+            "Synthetic critic receipt; not an LLM call.",
+            "If protected categories appear, public release should hold for rights-holder review.",
+            "The critic explains disclosure boundaries without revealing private implementation details.",
+        ],
+    }
+    receipt["critic_receipt_sha256"] = stable_json_sha256(receipt)
+    return receipt
 
 
 def run_proofing_demo(prior_path: Path, candidate_path: Path, out_dir: Path) -> dict[str, Any]:
@@ -274,6 +332,7 @@ def run_proofing_demo(prior_path: Path, candidate_path: Path, out_dir: Path) -> 
     candidate_manifest = build_manifest("candidate", candidate_payload, candidate_projection)
     drift_receipt = build_drift_receipt(prior_manifest, candidate_manifest, prior_projection, candidate_projection)
     proof_packet = build_proof_packet(prior_manifest, candidate_manifest, drift_receipt)
+    disclosure_critic = build_disclosure_critic_receipt(proof_packet)
     report = build_promotion_report(drift_receipt)
 
     write_json(out_dir / "prior_projection.json", prior_projection)
@@ -282,6 +341,7 @@ def run_proofing_demo(prior_path: Path, candidate_path: Path, out_dir: Path) -> 
     write_json(out_dir / "candidate_manifest.json", candidate_manifest)
     write_json(out_dir / "drift_receipt.json", drift_receipt)
     write_json(out_dir / "proof_packet.json", proof_packet)
+    write_json(out_dir / "disclosure_critic_receipt.json", disclosure_critic)
     (out_dir / "promotion_report.md").write_text(report, encoding="utf-8")
 
     return {
@@ -290,5 +350,6 @@ def run_proofing_demo(prior_path: Path, candidate_path: Path, out_dir: Path) -> 
         "drift_decision": drift_receipt["decision"],
         "promotion_status": "hold_for_review",
         "proof_packet": proof_packet["packet_id"],
+        "disclosure_critic": disclosure_critic["decision"],
         "output_dir": str(out_dir),
     }
