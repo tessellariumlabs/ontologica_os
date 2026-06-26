@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ontologica Public Drift Guard",
+  "type": "object",
+  "required": [
+    "prior_manifest",
+    "candidate_manifest",
+    "projection_delta_l2",
+    "decision",
+    "authority_ceiling",
+    "noncanonical"
+  ],
+  "properties": {
+    "prior_manifest": {"type": "string"},
+    "candidate_manifest": {"type": "string"},
+    "projection_delta_l2": {"type": "number", "minimum": 0},
+    "changed_fields": {"type": "array", "items": {"type": "string"}},
+    "decision": {"enum": ["pass", "warn", "hold_for_review", "deny"]},
+    "authority_ceiling": {"enum": ["candidate_only", "review_only", "public_reference"]},
+    "noncanonical": {"const": true}
+  }
+}
