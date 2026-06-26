@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/ontologica-os/toy_manifest.schema.json",
+  "title": "Toy Ontologica Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest_id", "schema_version", "authority_ceiling", "kernel", "inputs", "outputs", "promotion"],
+  "properties": {
+    "manifest_id": {"type": "string"},
+    "schema_version": {"type": "string"},
+    "authority_ceiling": {"type": "string", "enum": ["candidate_only", "reviewed_memory", "promoted_state", "denied"]},
+    "kernel": {
+      "type": "object",
+      "required": ["id", "version"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string"},
+        "version": {"type": "string"},
+        "sha256": {"type": "string"}
+      }
+    },
+    "inputs": {"type": "array", "items": {"$ref": "#/$defs/artifact"}},
+    "outputs": {"type": "array", "items": {"$ref": "#/$defs/artifact"}},
+    "receipts": {"type": "array", "items": {"$ref": "#/$defs/artifact"}},
+    "promotion": {
+      "type": "object",
+      "required": ["status"],
+      "additionalProperties": false,
+      "properties": {
+        "status": {"type": "string", "enum": ["hold", "promote", "quarantine", "deny"]},
+        "reason": {"type": "string"}
+      }
+    }
+  },
+  "$defs": {
+    "artifact": {
+      "type": "object",
+      "required": ["id", "sha256"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string"},
+        "sha256": {"type": "string"}
+      }
+    }
+  }
+}

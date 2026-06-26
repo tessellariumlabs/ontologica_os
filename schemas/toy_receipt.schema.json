@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/ontologica-os/toy_receipt.schema.json",
+  "title": "Toy Ontologica Receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["receipt_id", "receipt_type", "authority_ceiling", "decision"],
+  "properties": {
+    "receipt_id": {"type": "string"},
+    "receipt_type": {"type": "string"},
+    "authority_ceiling": {"type": "string"},
+    "prior_manifest": {"type": "string"},
+    "candidate_manifest": {"type": "string"},
+    "checks": {"type": "object", "additionalProperties": {"type": "string"}},
+    "drift": {"type": "object", "additionalProperties": true},
+    "decision": {"type": "string", "enum": ["pass", "warn", "hold_for_review", "quarantine", "deny"]},
+    "notes": {"type": "array", "items": {"type": "string"}}
+  }
+}
