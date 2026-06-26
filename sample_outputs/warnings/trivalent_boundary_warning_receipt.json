@@ -1,0 +1,17 @@
+{
+  "authority_ceiling": "candidate_only",
+  "category": "trivalent_inner_braid_public_boundary",
+  "decision": "hold_for_rights_holder_review",
+  "markers_detected": [
+    "trivalent inner braid"
+  ],
+  "notes": [
+    "Synthetic public warning receipt.",
+    "This receipt confirms category-marker detection only.",
+    "The protected concept is not explained here."
+  ],
+  "receipt_id": "toy_trivalent_boundary_warning_001",
+  "receipt_sha256": "synthetic_warning_receipt_sha_placeholder",
+  "receipt_type": "category_boundary_warning",
+  "severity": "warning"
+}
