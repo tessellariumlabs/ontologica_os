@@ -25,6 +25,7 @@ Ontologica OS is a public modeling vocabulary and reference harness for agentic 
 
 ```text
 ontologica_os/
+├── BOUNDARY.md           # public boundary statement
 ├── docs/                 # public doctrine and specification
 ├── schemas/              # noncanonical public JSON schemas
 ├── src/ontologica_os/    # clean-room reference implementation
