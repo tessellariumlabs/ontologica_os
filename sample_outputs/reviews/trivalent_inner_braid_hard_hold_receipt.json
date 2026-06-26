@@ -1,0 +1,30 @@
+{
+  "receipt_id": "hold_trivalent_inner_braid_2026_06_26_001",
+  "receipt_type": "hard_hold_receipt",
+  "artifact_under_review": "trivalent_inner_braid_public_boundary",
+  "authority_ceiling": "candidate_only",
+  "posture": "hold_for_rights_holder_review",
+  "release_gate": "blocked_until_rights_holder_review",
+  "reason": "trivalent logic is disclosure-sensitive; public repository may show posture labels only",
+  "public_postures_allowed": [
+    "pass_public_boundary",
+    "warning_scar_for_non_trivalent_caution",
+    "hold_for_rights_holder_review"
+  ],
+  "protected_categories_to_keep_private": [
+    "private trivalent rules",
+    "private scoring thresholds",
+    "private routing behavior",
+    "private mathematical reconstruction",
+    "private receipt graph topology",
+    "private workspace topology",
+    "private atom-serving machinery"
+  ],
+  "reassessment_required_before_public_release": true,
+  "final_decision": "hold",
+  "notes": [
+    "This receipt supersedes the earlier warning posture for trivalent-specific requests.",
+    "The earlier scar remains as historical proof of the loop tightening its rule.",
+    "The repository held its own law by choosing review instead of capability export."
+  ]
+}
