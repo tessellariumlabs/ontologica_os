@@ -7,7 +7,7 @@ Emphera is treated as the future production consolidation target outside this pu
 ## Final Product Shape
 
 ```text
-LLM coding sprints
+coding sprints
   -> local Ontologica consolidation lane
   -> boundary classification
   -> public / protected / review-state mapping
@@ -42,8 +42,8 @@ The public repository must not implement or disclose:
 - Emphera production code
 - Tessera Ontologica private implementation
 - private sprint corpora
-- private model prompts
-- private model routing
+- private automation instructions
+- private routing
 - private merge or promotion logic
 - private branch/worktree topology
 - private scoring or ranking
