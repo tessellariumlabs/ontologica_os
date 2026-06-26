@@ -1,0 +1,22 @@
+{
+  "receipt_id": "rights_holder_trivalent_acceptance_2026_06_26_001",
+  "receipt_type": "rights_holder_acceptance_receipt",
+  "status": "accepted_with_boundary",
+  "authority_ceiling": "candidate_only",
+  "accepted_by": "rights_holder",
+  "accepted_boundary": {
+    "trivalent_category_may_be_named": true,
+    "trivalent_logic_may_be_explained": false,
+    "trivalent_logic_may_be_implemented": false,
+    "public_posture_labels_allowed": true,
+    "future_trivalent_specific_changes_hard_hold": true
+  },
+  "clears_current_blocker": true,
+  "does_not_clear_future_trivalent_changes": true,
+  "decision": "current_public_boundary_accepted_for_release_review",
+  "notes": [
+    "The rights holder reviewed and accepted the category-level trivalent boundary.",
+    "The hard-hold rule remains active for future trivalent-specific changes.",
+    "Protected trivalent logic remains undisclosed."
+  ]
+}
