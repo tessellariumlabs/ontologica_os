@@ -10,9 +10,25 @@ The proposal, classification, routing, critique, or summarization behavior perfo
 
 The smallest public symbolic unit in the explanatory vocabulary. In this repository, tesserae are synthetic examples only.
 
+## Polyp
+
+A small candidate context unit. Publicly, a polyp may describe a bounded bundle of observed or proposed material that has not earned durable authority. It must not imply private memory topology, private scoring fields, private routing triggers, or private lifecycle rules.
+
+## Cluster
+
+A temporary grouping of related candidate polyps. Publicly, a cluster may describe a review bundle or explanatory grouping. It must not imply production clustering algorithms, private similarity metrics, thresholds, correlation logic, or model-routing behavior.
+
+## Shard
+
+A bounded context slice that may be manifest-identified and receipt-bound. Publicly, a shard may describe a candidate-only review packet. It must not imply real shard topology, private manifest lineage, production shard selection logic, private receipt graph structure, or runtime authority mapping.
+
 ## Kernel
 
 A bounded worker contract with Law, Work, and Proof. A kernel limits what a worker may read, propose, compute, validate, or claim.
+
+## Kernel Logic Surfacing
+
+The public repository may surface kernel logic only as Law, Work, and Proof contracts. It must not surface private router code, selection heuristics, model assignment rules, scoring functions, graph topology, promotion heuristics, or real receipts and manifests.
 
 ## Law
 
