@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ontologica Public Math Kernel Projection",
+  "type": "object",
+  "required": [
+    "kernel_id",
+    "kernel_version",
+    "field_order",
+    "tessera_ids",
+    "vector",
+    "sha256",
+    "noncanonical"
+  ],
+  "properties": {
+    "kernel_id": {"const": "public_reference_kernel"},
+    "kernel_version": {"type": "string"},
+    "field_order": {"type": "array", "items": {"type": "string"}},
+    "tessera_ids": {"type": "array", "items": {"type": "string"}},
+    "vector": {"type": "array", "items": {"type": "number"}},
+    "sha256": {"type": "string"},
+    "noncanonical": {"const": true}
+  }
+}
