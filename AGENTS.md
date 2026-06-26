@@ -109,6 +109,22 @@ The disclosure critic must not:
 - infer private scoring, routing, math, manifests, or receipt graph topology
 - grant publication, implementation, runtime, hardware, or durable-truth authority
 
+## Trivalent Inner Braid Rule
+
+A public trivalent inner braid may use only qualitative posture labels:
+
+```text
+pass_public_boundary
+warning_scar
+hold_for_rights_holder_review
+```
+
+It may leave a scar receipt when a maintainer request mentions disclosure-sensitive concepts, including trivalent logic, private analysis core, workspace topology, atom serving, or receipt graph topology.
+
+It must not publish private trivalent rules, scoring thresholds, routing behavior, mathematical reconstruction paths, atom-store schemas, or production policy engines.
+
+If repository documentation permits explanation but blocks implementation, leave a scar receipt instead of exporting machinery.
+
 ## Required Default Outcome
 
 When uncertain, choose:
