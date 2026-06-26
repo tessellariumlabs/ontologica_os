@@ -1,6 +1,6 @@
 # Pipeline Connector Scope
 
-Ontologica OS now has a widened product scope: a local-first pipeline connector for consolidating LLM coding sprints into governed review packets.
+Ontologica OS has a widened product scope: a local-first pipeline connector for consolidating complex coding-sprint sprawl into governed review packets.
 
 This scope extends the product identity without converting the public repository into a production framework.
 
@@ -10,12 +10,12 @@ This scope extends the product identity without converting the public repository
 
 ## Purpose
 
-The pipeline connector exists to help a builder consolidate many LLM-assisted coding sprints without letting raw sprint output become durable truth.
+The pipeline connector helps a builder consolidate many coding sprints without letting raw sprint output become durable truth.
 
 It turns sprint material into bounded review packets:
 
 ```text
-LLM coding sprint outputs
+coding sprint outputs
   -> local consolidation intake
   -> concept / artifact classification
   -> public vs protected boundary mapping
@@ -45,8 +45,8 @@ The public repository must not publish:
 - private source code
 - private branch strategy
 - real worktree topology
-- private model prompts
-- private model routing
+- private automation instructions
+- private routing
 - private scoring or ranking
 - production merge logic
 - production release mechanics
@@ -58,7 +58,7 @@ The public repository must not publish:
 
 ```mermaid
 flowchart TD
-    A[LLM coding sprint] --> B[Local sprint intake]
+    A[Coding sprint] --> B[Local sprint intake]
     B --> C[Changed-artifact summary]
     C --> D[Boundary classification]
     D --> E[Consolidation packet]
@@ -95,7 +95,7 @@ It must not publish Emphera production implementation, production routes, privat
 ## Safe Bridge Shape
 
 ```text
-private LLM sprint material
+private sprint material
   -> local Ontologica proofing lane
   -> consolidation packet
   -> disclosure critic receipt
@@ -117,4 +117,4 @@ promotion: none
 
 A future change may make the pipeline connector easier to understand.
 
-A future change must be held for rights-holder review if it makes the connector production-capable, automatically merge-capable, reconstructive of Tessera Ontologica, or able to promote sprint output without human review.
+A future change must be held for rights-holder review if it makes the connector production-capable, merge-capable, reconstructive of Tessera Ontologica, or able to promote sprint output without human review.
