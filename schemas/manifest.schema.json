@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ontologica Public Manifest",
+  "type": "object",
+  "required": [
+    "manifest_id",
+    "schema_version",
+    "authority_ceiling",
+    "kernel",
+    "inputs",
+    "outputs",
+    "receipts",
+    "promotion",
+    "sha256",
+    "noncanonical"
+  ],
+  "properties": {
+    "manifest_id": {"type": "string"},
+    "schema_version": {"const": "ontologica.manifest.v1"},
+    "authority_ceiling": {"enum": ["candidate_only", "review_only", "public_reference"]},
+    "kernel": {
+      "type": "object",
+      "required": ["id", "version", "sha256"],
+      "properties": {
+        "id": {"type": "string"},
+        "version": {"type": "string"},
+        "sha256": {"type": "string"}
+      }
+    },
+    "inputs": {"type": "array"},
+    "outputs": {"type": "array"},
+    "receipts": {"type": "array"},
+    "prior_manifests": {"type": "array", "items": {"type": "string"}},
+    "promotion": {
+      "type": "object",
+      "required": ["status", "reason"],
+      "properties": {
+        "status": {"enum": ["hold", "hold_for_review", "quarantine", "deny", "promote"]},
+        "reason": {"type": "string"}
+      }
+    },
+    "sha256": {"type": "string"},
+    "noncanonical": {"const": true}
+  }
+}
