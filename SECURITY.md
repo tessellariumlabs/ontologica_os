@@ -8,7 +8,7 @@ This repository is a public explanatory lens and synthetic reference surface. It
 
 Do not open public issues for security-sensitive reports.
 
-For non-sensitive boundary questions, use the repository's Boundary Question issue template. For security-sensitive or rights-sensitive matters, use the rights holder contact path listed in [COMMERCIAL.md](COMMERCIAL.md) and do not include private, confidential, proprietary, or exploit-enabling material in public threads.
+For non-sensitive boundary questions, use the rights holder contact path listed in [COMMERCIAL.md](COMMERCIAL.md). For security-sensitive or rights-sensitive matters, do not include private, confidential, proprietary, or sensitive technical material in public threads.
 
 ## In Scope
 
