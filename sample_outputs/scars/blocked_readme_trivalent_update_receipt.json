@@ -1,0 +1,23 @@
+{
+  "receipt_id": "scar_blocked_readme_trivalent_update_2026_06_26_001",
+  "receipt_type": "blocked_markdown_action_scar_receipt",
+  "artifact_under_review": "README.md trivalent braid surfacing patch",
+  "authority_ceiling": "candidate_only",
+  "posture": "warning_scar",
+  "release_gate": "reassess_before_public_disclosure",
+  "blocked_action": "README update attempted but connector safety checks blocked the markdown patch",
+  "intended_safe_change": [
+    "surface trivalent-inner-braid.md in read order",
+    "surface braided-development-loop.md in read order",
+    "surface PUBLIC_RELEASE_REASSESSMENT.md in read order",
+    "describe scar receipts as public caution artifacts"
+  ],
+  "protected_logic_disclosed": false,
+  "private_trivalent_logic_disclosed": false,
+  "decision": "leave scar receipt and keep public release on hold",
+  "notes": [
+    "This is the requested scar path for a blocked .md action.",
+    "The canonical release gate remains rights-holder final review.",
+    "No public visibility change was made."
+  ]
+}
