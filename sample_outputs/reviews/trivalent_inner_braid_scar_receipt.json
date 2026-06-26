@@ -1,0 +1,35 @@
+{
+  "receipt_id": "scar_trivalent_inner_braid_2026_06_26_001",
+  "receipt_type": "scar_receipt",
+  "artifact_under_review": "trivalent_inner_braid_public_boundary",
+  "authority_ceiling": "candidate_only",
+  "posture": "warning_scar",
+  "release_gate": "reassess_before_public_disclosure",
+  "warning": "⚠️ category-level trivalent leak posture is public; private trivalent logic remains undisclosed",
+  "why_scar_exists": [
+    "Maintainer requested a trivalent inner braid leak assessment.",
+    "Repository law allows vocabulary and proof posture but blocks private scoring, routing, math, and production analysis machinery.",
+    "Public implementation is limited to qualitative postures and scar receipts."
+  ],
+  "public_postures": [
+    "pass_public_boundary",
+    "warning_scar",
+    "hold_for_rights_holder_review"
+  ],
+  "protected_categories_to_keep_private": [
+    "private trivalent rules",
+    "private scoring thresholds",
+    "private routing behavior",
+    "private mathematical reconstruction",
+    "private receipt graph topology",
+    "private workspace topology",
+    "private atom-serving machinery"
+  ],
+  "reassessment_required_before_public_release": true,
+  "decision": "do_not_publish_trivalent_logic_without_rights_holder_review",
+  "notes": [
+    "This scar receipt is the public evidence of the block.",
+    "It does not disclose private trivalent logic.",
+    "It improves anti-leak posture by making caution durable."
+  ]
+}
