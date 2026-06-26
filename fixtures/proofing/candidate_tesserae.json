@@ -1,0 +1,32 @@
+[
+  {
+    "id": "tessera.candidate.operator_choice",
+    "label": "operator choice with revised pressure",
+    "fields": {
+      "novelty": 0.5,
+      "risk": 0.25,
+      "coherence": 0.86,
+      "embodiment": 0.58
+    }
+  },
+  {
+    "id": "tessera.candidate.surface_preview",
+    "label": "surface preview with stronger embodiment",
+    "fields": {
+      "novelty": 0.36,
+      "risk": 0.2,
+      "coherence": 0.88,
+      "embodiment": 0.75
+    }
+  },
+  {
+    "id": "tessera.candidate.memory_mark",
+    "label": "candidate memory mark with drift",
+    "fields": {
+      "novelty": 0.31,
+      "risk": 0.16,
+      "coherence": 0.9,
+      "embodiment": 0.54
+    }
+  }
+]
