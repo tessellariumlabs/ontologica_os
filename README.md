@@ -14,7 +14,7 @@ Ontologica OS is source-visible, rights-reserved, noncanonical, and nonproductio
 
 It is **not open source**.
 
-Use, implementation, redistribution, commercial, research, publication beyond ordinary citation, model, benchmark, or derivative permissions require a separate written agreement. See [LICENSE.md](LICENSE.md), [COMMERCIAL.md](COMMERCIAL.md), [AI_USE_POLICY.md](AI_USE_POLICY.md), and [TRADEMARKS.md](TRADEMARKS.md).
+Use, implementation, redistribution, commercial use, research use, publication beyond ordinary citation, model use, benchmark use, or derivative permissions require a separate written agreement. See [LICENSE.md](LICENSE.md), [COMMERCIAL.md](COMMERCIAL.md), [AI_USE_POLICY.md](AI_USE_POLICY.md), and [TRADEMARKS.md](TRADEMARKS.md).
 
 ## Public Scope
 
@@ -94,12 +94,13 @@ See [OWNERSHIP_BOUNDARY.md](OWNERSHIP_BOUNDARY.md), [SANITIZATION.md](SANITIZATI
 11. [docs/architecture.md](docs/architecture.md)
 12. [docs/glossary.md](docs/glossary.md)
 13. [docs/proofing-demo.md](docs/proofing-demo.md)
-14. [docs/mathematical-kernel.md](docs/mathematical-kernel.md)
-15. [docs/sha-manifest-model.md](docs/sha-manifest-model.md)
-16. [docs/drift-guarding.md](docs/drift-guarding.md)
-17. [docs/kernel-contracts.md](docs/kernel-contracts.md)
-18. [docs/receipt-model.md](docs/receipt-model.md)
-19. [docs/promotion-gates.md](docs/promotion-gates.md)
+14. [docs/math-and-analysis-boundary.md](docs/math-and-analysis-boundary.md)
+15. [docs/mathematical-kernel.md](docs/mathematical-kernel.md)
+16. [docs/sha-manifest-model.md](docs/sha-manifest-model.md)
+17. [docs/drift-guarding.md](docs/drift-guarding.md)
+18. [docs/kernel-contracts.md](docs/kernel-contracts.md)
+19. [docs/receipt-model.md](docs/receipt-model.md)
+20. [docs/promotion-gates.md](docs/promotion-gates.md)
 
 ## Status
 
