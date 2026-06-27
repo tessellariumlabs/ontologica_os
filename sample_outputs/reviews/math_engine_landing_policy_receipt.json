@@ -1,0 +1,37 @@
+{
+  "receipt_id": "math_engine_landing_policy_2026_06_27_001",
+  "receipt_type": "landing_policy_receipt",
+  "status": "landed",
+  "authority_ceiling": "candidate_only",
+  "policy_artifacts": [
+    "docs/math-engine-landing-policy.md",
+    "emphera-os/MATH_ENGINE_INTAKE.md"
+  ],
+  "primary_targets": {
+    "general_analysis_math": "emphera-os",
+    "public_analysis_summary": "emphera",
+    "runtime_spine_math": "local-loom",
+    "ontology_shard_grammar_math": "shardbench",
+    "embodiment_actuator_math": "tessera-builder then tessera",
+    "public_toy_math": "ontologica_os only as synthetic candidate-only demo"
+  },
+  "default_gate": {
+    "proof_packet": "present",
+    "disclosure_critic": "present",
+    "protected_terms_review": "present",
+    "math_surface": "declared",
+    "human_review": "required",
+    "final_gate": "hold / review / deny"
+  },
+  "anti_leak_assertion": {
+    "private_dimensions_exported": false,
+    "private_thresholds_exported": false,
+    "private_scoring_exported": false,
+    "private_routing_exported": false,
+    "runtime_authority_granted": false,
+    "hardware_authority_granted": false,
+    "production_authority_granted": false
+  },
+  "decision": "math_engine_belongs_in_backroom_targets_not_public_ontologica_os",
+  "next_gate": "human review before any real math-engine landing"
+}
