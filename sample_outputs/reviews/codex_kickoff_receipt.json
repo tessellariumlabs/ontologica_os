@@ -1,0 +1,54 @@
+{
+  "receipt_id": "codex_kickoff_2026_06_27_001",
+  "receipt_type": "codex_kickoff_receipt",
+  "status": "kickoff_landed",
+  "authority_ceiling": "candidate_only",
+  "artifacts": [
+    "CODEX_KICKOFF.md",
+    "docs/codex-rung4-work-order.md"
+  ],
+  "target_repositories": {
+    "emphera_os": {
+      "repo": "tessellariumlabs/emphera-os",
+      "task_file": "CODEX_TASKS.md",
+      "status": "landed"
+    },
+    "local_loom": {
+      "repo": "tessellariumlabs/local-loom",
+      "task_file": "CODEX_KICKOFF.md",
+      "status": "landed_narrowed_after_connector_block"
+    },
+    "tessera_builder": {
+      "repo": "tessellariumlabs/tessera-builder",
+      "task_file": "CODEX_KICKOFF.md",
+      "status": "landed"
+    }
+  },
+  "current_rung": 3,
+  "next_rung": 4,
+  "next_focus": "backroom intake packets",
+  "required_gate": {
+    "proof_packet": "present",
+    "disclosure_critic": "present",
+    "protected_terms_review": "present",
+    "source_repository": "declared",
+    "target_repository": "declared",
+    "human_review": "required",
+    "final_gate": "hold / review / deny"
+  },
+  "anti_leak_assertion": {
+    "private_source_exported": false,
+    "private_runtime_internals_exported": false,
+    "private_math_exported": false,
+    "private_scoring_exported": false,
+    "private_routing_exported": false,
+    "hardware_authority_granted": false,
+    "production_authority_granted": false
+  },
+  "decision": "codex_may_begin_rung4_candidate_work_with_hold_gates",
+  "notes": [
+    "Kickoff grants no production or release authority.",
+    "local-loom task file was narrowed after a connector block.",
+    "All Rung 4 outputs must remain synthetic and noncanonical."
+  ]
+}
