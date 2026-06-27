@@ -1,0 +1,85 @@
+{
+  "receipt_id": "rung4_consolidation_status_2026_06_27_001",
+  "receipt_type": "consolidation_status_receipt",
+  "status": "target_repo_candidate_prs_open_and_hold_gated",
+  "authority_ceiling": "candidate_only",
+  "objective": "finish consolidation of the stable kernels into their target repo",
+  "target_repositories": {
+    "emphera_os": {
+      "repo": "tessellariumlabs/emphera-os",
+      "target_pr": "https://github.com/tessellariumlabs/emphera-os/pull/1",
+      "pr_state": "open_draft_unmerged_mergeable",
+      "branch": "codex/rung4-backroom-intake-packets",
+      "expected_files": [
+        "examples/consolidation_intake_packet.md",
+        "sample_outputs/reviews/consolidation_intake_disclosure_critic_receipt.json",
+        "sample_outputs/reports/consolidation_intake_release_report.md"
+      ]
+    },
+    "local_loom": {
+      "repo": "tessellariumlabs/local-loom",
+      "target_pr": "https://github.com/tessellariumlabs/local-loom/pull/1",
+      "pr_state": "open_draft_unmerged_mergeable",
+      "branch": "codex/rung4-backroom-intake-packets",
+      "expected_files": [
+        "examples/runtime_spine_intake_packet.md",
+        "sample_outputs/reviews/runtime_spine_disclosure_critic_receipt.json",
+        "sample_outputs/reports/runtime_spine_release_report.md",
+        "examples/spine_intake_packet.md",
+        "sample_outputs/reviews/spine_packet_review.json",
+        "sample_outputs/reports/spine_packet_report.md"
+      ]
+    },
+    "tessera_builder": {
+      "repo": "tessellariumlabs/tessera-builder",
+      "target_pr": "https://github.com/tessellariumlabs/tessera-builder/pull/1",
+      "pr_state": "open_draft_unmerged_mergeable",
+      "branch": "codex/rung4-backroom-intake-packets",
+      "expected_files": [
+        "examples/build_candidate_packet.md",
+        "sample_outputs/reviews/build_candidate_disclosure_critic_receipt.json",
+        "sample_outputs/reports/build_candidate_release_report.md",
+        "sample_outputs/reviews/build_candidate_review.json",
+        "sample_outputs/reports/build_candidate_report.md"
+      ]
+    }
+  },
+  "central_receipt_branch": {
+    "repo": "tessellariumlabs/ontologica_os",
+    "branch": "codex/rung4-backroom-intake-packets",
+    "status": "ahead_by_2_then_status_receipt_added",
+    "files": [
+      "sample_outputs/reviews/rung4_backroom_intake_packets_receipt.json",
+      "sample_outputs/reports/rung4_backroom_intake_review_path.md",
+      "sample_outputs/reviews/rung4_consolidation_status_receipt.json"
+    ],
+    "pr_creation": "blocked_by_github_integration_403",
+    "issue_creation": "blocked_because_issues_disabled_410"
+  },
+  "validation_evidence": {
+    "target_prs_open": true,
+    "target_prs_draft": true,
+    "target_prs_unmerged": true,
+    "target_prs_mergeable": true,
+    "json_receipts_parsed_before_pr_creation": true,
+    "fetched_branch_diff_check_passed_before_pr_creation": true,
+    "central_review_path_present": true
+  },
+  "authority_denials": {
+    "production_authority": "not_granted",
+    "release_authority": "not_granted",
+    "merge_authority": "not_granted",
+    "runtime_authority": "not_granted",
+    "hardware_authority": "not_granted",
+    "actuator_authority": "not_granted",
+    "private_canon_authority": "not_granted"
+  },
+  "completion_assessment": {
+    "candidate_consolidation_staged": true,
+    "target_repo_review_paths_present": true,
+    "main_branch_consolidation_complete": false,
+    "reason_not_complete": "Human review and merge authority are still required before the stable kernel packet sets can be considered consolidated into target repo main branches."
+  },
+  "final_gate": "hold_for_review",
+  "decision": "hold_for_human_review_and_merge_authority"
+}
