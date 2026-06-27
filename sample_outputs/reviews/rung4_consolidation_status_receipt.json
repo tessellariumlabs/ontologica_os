@@ -1,26 +1,34 @@
 {
-  "receipt_id": "rung4_consolidation_status_2026_06_27_001",
+  "receipt_id": "rung4_consolidation_status_2026_06_27_002",
   "receipt_type": "consolidation_status_receipt",
-  "status": "target_repo_candidate_prs_open_and_hold_gated",
+  "status": "target_repo_candidate_prs_open_draft_unmerged_and_hold_gated",
   "authority_ceiling": "candidate_only",
-  "objective": "finish consolidation of the stable kernels into their target repo",
+  "objective": "Consolidation of three stable kernels into their target repo",
+  "observed_date": "2026-06-27",
   "target_repositories": {
     "emphera_os": {
       "repo": "tessellariumlabs/emphera-os",
       "target_pr": "https://github.com/tessellariumlabs/emphera-os/pull/1",
       "pr_state": "open_draft_unmerged_mergeable",
-      "branch": "codex/rung4-backroom-intake-packets",
+      "base_branch": "main",
+      "head_branch": "codex/rung4-backroom-intake-packets",
+      "head_sha": "1baf1cfff8ecf65f141692468320413baba77b67",
+      "compare_status": "ahead_by_3_behind_by_0",
       "expected_files": [
         "examples/consolidation_intake_packet.md",
         "sample_outputs/reviews/consolidation_intake_disclosure_critic_receipt.json",
         "sample_outputs/reports/consolidation_intake_release_report.md"
-      ]
+      ],
+      "final_gate": "hold_for_review"
     },
     "local_loom": {
       "repo": "tessellariumlabs/local-loom",
       "target_pr": "https://github.com/tessellariumlabs/local-loom/pull/1",
       "pr_state": "open_draft_unmerged_mergeable",
-      "branch": "codex/rung4-backroom-intake-packets",
+      "base_branch": "main",
+      "head_branch": "codex/rung4-backroom-intake-packets",
+      "head_sha": "035e34ea43ce7c1d6706dd66ca32c86f546b31ec",
+      "compare_status": "ahead_by_6_behind_by_0",
       "expected_files": [
         "examples/runtime_spine_intake_packet.md",
         "sample_outputs/reviews/runtime_spine_disclosure_critic_receipt.json",
@@ -28,26 +36,31 @@
         "examples/spine_intake_packet.md",
         "sample_outputs/reviews/spine_packet_review.json",
         "sample_outputs/reports/spine_packet_report.md"
-      ]
+      ],
+      "final_gate": "hold_for_review"
     },
     "tessera_builder": {
       "repo": "tessellariumlabs/tessera-builder",
       "target_pr": "https://github.com/tessellariumlabs/tessera-builder/pull/1",
       "pr_state": "open_draft_unmerged_mergeable",
-      "branch": "codex/rung4-backroom-intake-packets",
+      "base_branch": "main",
+      "head_branch": "codex/rung4-backroom-intake-packets",
+      "head_sha": "2b3255ddb05ae3751804231f207c08337298027e",
+      "compare_status": "ahead_by_5_behind_by_0",
       "expected_files": [
         "examples/build_candidate_packet.md",
         "sample_outputs/reviews/build_candidate_disclosure_critic_receipt.json",
         "sample_outputs/reports/build_candidate_release_report.md",
         "sample_outputs/reviews/build_candidate_review.json",
         "sample_outputs/reports/build_candidate_report.md"
-      ]
+      ],
+      "final_gate": "hold_for_review"
     }
   },
   "central_receipt_branch": {
     "repo": "tessellariumlabs/ontologica_os",
     "branch": "codex/rung4-backroom-intake-packets",
-    "status": "ahead_by_2_then_status_receipt_added",
+    "compare_status": "ahead_by_3_behind_by_0_before_this_receipt_update",
     "files": [
       "sample_outputs/reviews/rung4_backroom_intake_packets_receipt.json",
       "sample_outputs/reports/rung4_backroom_intake_review_path.md",
@@ -61,9 +74,12 @@
     "target_prs_draft": true,
     "target_prs_unmerged": true,
     "target_prs_mergeable": true,
-    "json_receipts_parsed_before_pr_creation": true,
-    "fetched_branch_diff_check_passed_before_pr_creation": true,
-    "central_review_path_present": true
+    "target_branches_behind_main_by_0": true,
+    "target_expected_files_present_on_candidate_branches": true,
+    "central_review_path_present": true,
+    "central_completion_receipt_present": true,
+    "json_receipts_parse_from_fetched_remote_refs": true,
+    "fetched_remote_ref_diff_check_passed": true
   },
   "authority_denials": {
     "production_authority": "not_granted",
@@ -72,13 +88,15 @@
     "runtime_authority": "not_granted",
     "hardware_authority": "not_granted",
     "actuator_authority": "not_granted",
+    "github_mutation_authority": "not_granted",
     "private_canon_authority": "not_granted"
   },
   "completion_assessment": {
     "candidate_consolidation_staged": true,
     "target_repo_review_paths_present": true,
+    "target_default_branches_contain_packets": false,
     "main_branch_consolidation_complete": false,
-    "reason_not_complete": "Human review and merge authority are still required before the stable kernel packet sets can be considered consolidated into target repo main branches."
+    "reason_not_complete": "Human review and merge authority are still required before the stable kernel packet sets can be considered consolidated into target repository default branches."
   },
   "final_gate": "hold_for_review",
   "decision": "hold_for_human_review_and_merge_authority"
