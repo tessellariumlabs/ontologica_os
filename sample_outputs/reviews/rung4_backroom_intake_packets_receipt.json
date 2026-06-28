@@ -1,19 +1,24 @@
 {
-  "receipt_id": "rung4_backroom_intake_packets_2026_06_27_001",
+  "receipt_id": "rung4_backroom_intake_packets_2026_06_28_001",
   "receipt_type": "development_ladder_receipt",
-  "status": "rung4_backroom_intake_packets_landed",
+  "status": "rung4_backroom_intake_packets_merged_to_target_repos",
   "authority_ceiling": "candidate_only",
+  "observed_date": "2026-06-28",
   "rung": {
     "number": 4,
     "label": "backroom intake packets"
   },
   "branch": "codex/rung4-backroom-intake-packets",
-  "emphera_os_packet": "present",
-  "local_loom_packet": "present",
-  "tessera_builder_packet": "present",
+  "emphera_os_packet": "present_on_main",
+  "local_loom_packet": "present_on_main",
+  "tessera_builder_packet": "present_on_main",
   "artifacts": {
     "emphera_os": {
       "repo": "tessellariumlabs/emphera-os",
+      "pr": "https://github.com/tessellariumlabs/emphera-os/pull/1",
+      "pr_state": "closed_merged",
+      "merged_at": "2026-06-28T10:36:40Z",
+      "merge_commit_sha": "66959098e4ed9153f996720363eac3d738d932cf",
       "packet": "examples/consolidation_intake_packet.md",
       "disclosure_critic": "sample_outputs/reviews/consolidation_intake_disclosure_critic_receipt.json",
       "release_report": "sample_outputs/reports/consolidation_intake_release_report.md",
@@ -21,6 +26,10 @@
     },
     "local_loom": {
       "repo": "tessellariumlabs/local-loom",
+      "pr": "https://github.com/tessellariumlabs/local-loom/pull/1",
+      "pr_state": "closed_merged",
+      "merged_at": "2026-06-28T10:37:22Z",
+      "merge_commit_sha": "0486df366c175dce33094a9a980acd22b3b497c5",
       "packet": "examples/runtime_spine_intake_packet.md",
       "disclosure_critic": "sample_outputs/reviews/runtime_spine_disclosure_critic_receipt.json",
       "release_report": "sample_outputs/reports/runtime_spine_release_report.md",
@@ -33,6 +42,10 @@
     },
     "tessera_builder": {
       "repo": "tessellariumlabs/tessera-builder",
+      "pr": "https://github.com/tessellariumlabs/tessera-builder/pull/1",
+      "pr_state": "closed_merged",
+      "merged_at": "2026-06-28T10:37:44Z",
+      "merge_commit_sha": "82c8b7b49014c147d2559bd6720b1c067607622f",
       "packet": "examples/build_candidate_packet.md",
       "disclosure_critic": "sample_outputs/reviews/build_candidate_disclosure_critic_receipt.json",
       "release_report": "sample_outputs/reports/build_candidate_release_report.md",
@@ -68,16 +81,23 @@
     "runtime_authority_granted": false,
     "production_authority_granted": false,
     "release_authority_granted": false,
-    "merge_authority_granted": false
+    "codex_merge_authority_granted": false
+  },
+  "validation_evidence": {
+    "target_prs_closed_merged": true,
+    "target_expected_files_verified_on_main": true,
+    "target_receipts_remain_synthetic_noncanonical": true,
+    "target_final_gates_remain_hold_for_review": true
   },
   "final_gate": "hold_for_review",
   "release_authority": "not_granted",
   "production_authority": "not_granted",
-  "merge_authority": "not_granted",
-  "decision": "rung4_backroom_intake_packets_landed_with_hold",
+  "codex_merge_authority": "not_granted",
+  "decision": "rung4_backroom_intake_packets_merged_to_target_repos_with_hold_gates",
   "notes": [
-    "All packet sets are synthetic, noncanonical, and candidate-only.",
-    "local-loom and tessera-builder include repo-local compatibility paths for their narrowed kickoff filenames.",
-    "No production, release, merge, runtime, hardware, actuator, or private-canon authority is granted."
+    "All three target packet sets are present on their target repository default branches.",
+    "All packet sets remain synthetic, noncanonical, and candidate-only.",
+    "The target repository merges were observed as completed by human/GitHub review; Codex was not granted independent merge authority.",
+    "No production, release, runtime, hardware, actuator, or private-canon authority is granted."
   ]
 }
