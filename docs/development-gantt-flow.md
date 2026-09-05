@@ -144,7 +144,7 @@ Outcome:
 
 - ontology shard packet shape
 - grammar surface packet shape
-- Corrovia route record packet shape
+- protected route-record packet shape
 - scars and pearls ledger shape
 - no canonical private shard store
 

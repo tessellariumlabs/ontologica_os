@@ -14,7 +14,7 @@ local-loom
 shardbench
   ontology shard storage
   grammar database workbench
-  Corrovia runtime-route records
+  protected runtime-route records
   scars and pearls ledger
   shard movement proof posture
 ```
@@ -49,11 +49,11 @@ It must not grant production runtime authority, automatic promotion, uncontrolle
 
 ## shardbench Boundary
 
-shardbench stores and reviews ontology shards, grammar surfaces, Corrovia runtime-route records, scars, and pearls.
+shardbench stores and reviews ontology shards, grammar surfaces, protected runtime-route records, scars, and pearls.
 
 It may hold shard packets, grammar sketches, route records, scar receipts, pearl receipts, protected-term reports, and lineage summaries.
 
-It must not publish private canonical shard stores, production grammar database exports, executable runtime-route machinery, private Corrovia internals, real private manifests/receipts, or automatic runtime promotion.
+It must not publish private canonical shard stores, production grammar database exports, executable runtime-route machinery, private routing internals, real private manifests/receipts, or automatic runtime promotion.
 
 ## Movement Gate
 

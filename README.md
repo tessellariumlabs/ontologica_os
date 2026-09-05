@@ -116,6 +116,17 @@ Public artifacts may inspire private hardening only through manual human review.
 
 See [OWNERSHIP_BOUNDARY.md](OWNERSHIP_BOUNDARY.md), [SANITIZATION.md](SANITIZATION.md), [AGENTS.md](AGENTS.md), and [PUBLIC_RELEASE_CHECKLIST.md](PUBLIC_RELEASE_CHECKLIST.md).
 
+## Process Transparency
+
+The publication posture is deny-by-default and prospective: only newly authored,
+allowlisted public-boundary material enters a candidate. Unknown-rights,
+secret-bearing, confidential, or capability-bearing material is omitted and
+held; it is never treated as cleared merely because it was redacted.
+
+See [docs/process-transparency-and-sanitization.md](docs/process-transparency-and-sanitization.md)
+and the synthetic, noncanonical
+[process transparency ledger](sample_outputs/reviews/process_transparency_sanitization_ledger.json).
+
 ## Recommended Read Order
 
 1. [LICENSE.md](LICENSE.md)
@@ -124,29 +135,30 @@ See [OWNERSHIP_BOUNDARY.md](OWNERSHIP_BOUNDARY.md), [SANITIZATION.md](SANITIZATI
 4. [TRADEMARKS.md](TRADEMARKS.md)
 5. [OWNERSHIP_BOUNDARY.md](OWNERSHIP_BOUNDARY.md)
 6. [SANITIZATION.md](SANITIZATION.md)
-7. [AGENTS.md](AGENTS.md)
-8. [SECURITY.md](SECURITY.md)
-9. [PUBLIC_RELEASE_CHECKLIST.md](PUBLIC_RELEASE_CHECKLIST.md)
-10. [CHANGELOG.md](CHANGELOG.md)
-11. [docs/product-identity.md](docs/product-identity.md)
-12. [docs/pipeline-connector-scope.md](docs/pipeline-connector-scope.md)
-13. [docs/emphera-production-validation.md](docs/emphera-production-validation.md)
-14. [docs/doctrine.md](docs/doctrine.md)
-15. [docs/architecture.md](docs/architecture.md)
-16. [docs/glossary.md](docs/glossary.md)
-17. [docs/proofing-demo.md](docs/proofing-demo.md)
-18. [docs/proof-packet-anatomy.md](docs/proof-packet-anatomy.md)
-19. [docs/disclosure-critic.md](docs/disclosure-critic.md)
-20. [docs/math-and-analysis-boundary.md](docs/math-and-analysis-boundary.md)
-21. [docs/mathematical-kernel.md](docs/mathematical-kernel.md)
-22. [docs/toy-math-kernel-contract.md](docs/toy-math-kernel-contract.md)
-23. [docs/polyp-cluster-shard-boundary.md](docs/polyp-cluster-shard-boundary.md)
-24. [docs/workspace-policy-shard-boundary.md](docs/workspace-policy-shard-boundary.md)
-25. [docs/sha-manifest-model.md](docs/sha-manifest-model.md)
-26. [docs/drift-guarding.md](docs/drift-guarding.md)
-27. [docs/kernel-contracts.md](docs/kernel-contracts.md)
-28. [docs/receipt-model.md](docs/receipt-model.md)
-29. [docs/promotion-gates.md](docs/promotion-gates.md)
+7. [docs/process-transparency-and-sanitization.md](docs/process-transparency-and-sanitization.md)
+8. [AGENTS.md](AGENTS.md)
+9. [SECURITY.md](SECURITY.md)
+10. [PUBLIC_RELEASE_CHECKLIST.md](PUBLIC_RELEASE_CHECKLIST.md)
+11. [CHANGELOG.md](CHANGELOG.md)
+12. [docs/product-identity.md](docs/product-identity.md)
+13. [docs/pipeline-connector-scope.md](docs/pipeline-connector-scope.md)
+14. [docs/emphera-production-validation.md](docs/emphera-production-validation.md)
+15. [docs/doctrine.md](docs/doctrine.md)
+16. [docs/architecture.md](docs/architecture.md)
+17. [docs/glossary.md](docs/glossary.md)
+18. [docs/proofing-demo.md](docs/proofing-demo.md)
+19. [docs/proof-packet-anatomy.md](docs/proof-packet-anatomy.md)
+20. [docs/disclosure-critic.md](docs/disclosure-critic.md)
+21. [docs/math-and-analysis-boundary.md](docs/math-and-analysis-boundary.md)
+22. [docs/mathematical-kernel.md](docs/mathematical-kernel.md)
+23. [docs/toy-math-kernel-contract.md](docs/toy-math-kernel-contract.md)
+24. [docs/polyp-cluster-shard-boundary.md](docs/polyp-cluster-shard-boundary.md)
+25. [docs/workspace-policy-shard-boundary.md](docs/workspace-policy-shard-boundary.md)
+26. [docs/sha-manifest-model.md](docs/sha-manifest-model.md)
+27. [docs/drift-guarding.md](docs/drift-guarding.md)
+28. [docs/kernel-contracts.md](docs/kernel-contracts.md)
+29. [docs/receipt-model.md](docs/receipt-model.md)
+30. [docs/promotion-gates.md](docs/promotion-gates.md)
 
 ## Status
 

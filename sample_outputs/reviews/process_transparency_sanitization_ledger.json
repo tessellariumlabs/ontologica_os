@@ -1,0 +1,92 @@
+{
+  "ledger_id": "process_transparency_sanitization_ledger_synthetic_v1",
+  "ledger_class": "synthetic_noncanonical_public_summary",
+  "status": "hold_for_review",
+  "authority_ceiling": "candidate_only",
+  "emphera_intake": "human_controlled_candidate",
+  "source_boundary": {
+    "authorship_basis": "newly_authored_public_boundary_language",
+    "protected_source_content_inspected_by_public_tool": false,
+    "protected_source_material_imported": false,
+    "protected_source_history_imported": false,
+    "third_party_source_text_imported": false,
+    "unknown_rights_material_included": false
+  },
+  "prospective_gates": [
+    {
+      "gate": "origin_and_rights_known",
+      "posture": "pass_public_boundary",
+      "failure_outcome": "exclude_and_hold"
+    },
+    {
+      "gate": "secret_and_confidential_material_absent",
+      "posture": "pass_public_boundary",
+      "failure_outcome": "exclude_and_hold"
+    },
+    {
+      "gate": "protected_capability_absent",
+      "posture": "pass_public_boundary",
+      "failure_outcome": "exclude_and_hold"
+    },
+    {
+      "gate": "human_authority_preserved",
+      "posture": "hold_for_review",
+      "failure_outcome": "exclude_and_hold"
+    }
+  ],
+  "dwell": {
+    "mode": "bounded_qualitative_review",
+    "numeric_scoring_used": false,
+    "thresholds_used": false,
+    "automatic_promotion_on_repetition": false,
+    "strong_binding_claimed": false,
+    "repetition_response": "rotate_to_an_adjacent_review_lens",
+    "bounded_exhaustion_outcome": "hold_for_review",
+    "review_rounds": [
+      {
+        "lens": "origin_and_rights",
+        "question": "Is every included phrase newly authored for this public boundary?",
+        "backfill": "Omit any phrase whose publication basis is not explicit."
+      },
+      {
+        "lens": "secret_hygiene",
+        "question": "Could any included value identify a secret or confidential surface?",
+        "backfill": "Remove the candidate from the publish set and retain only a local gap record."
+      },
+      {
+        "lens": "explanatory_scope",
+        "question": "Does the candidate explain posture without exporting reusable capability?",
+        "backfill": "Replace implementation detail with a qualitative boundary statement or omit it."
+      },
+      {
+        "lens": "human_authority",
+        "question": "Could the artifact be mistaken for clearance, promotion, or runtime authority?",
+        "backfill": "Keep the candidate held and require independent human review."
+      }
+    ]
+  },
+  "public_candidate_files": [
+    "CHANGELOG.md",
+    "README.md",
+    "docs/development-gantt-flow.md",
+    "docs/process-transparency-and-sanitization.md",
+    "docs/runtime-shard-kernel-strategy.md",
+    "sample_outputs/reviews/process_transparency_sanitization_ledger.json",
+    "tests/test_process_transparency_sanitization.py"
+  ],
+  "publication": {
+    "target": "review_branch_only",
+    "merge_allowed": false,
+    "visibility_change_allowed": false,
+    "publication_authority_granted": false,
+    "history_review": "required_before_visibility_change",
+    "current_tree_removal_counts_as_history_clearance": false,
+    "rights_holder_review_required": true,
+    "technical_boundary_review_required": true
+  },
+  "notes": [
+    "This ledger is synthetic and noncanonical.",
+    "It contains no source excerpts, source digests, or repository lineage.",
+    "It records process posture, not copyright clearance or publication approval."
+  ]
+}

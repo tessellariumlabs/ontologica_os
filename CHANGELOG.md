@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased — Process Transparency Candidate
+
+Status: `hold_for_review`; authority ceiling: `candidate_only`.
+
+- adds a deny-by-default, prospective sanitization explanation
+- adds a synthetic public process ledger with bounded qualitative dwell and
+  adjacency rotation
+- adds tests that prevent source backflow, self-promotion, and obvious secret or
+  local-path markers in the new public packet
+- preserves manual rights-holder and technical review before merge or any
+  visibility change
+
 ## v1.0.0 — Public Lens Baseline
 
 Status: release candidate until `PUBLIC_RELEASE_CHECKLIST.md` is completed by the rights holder.
