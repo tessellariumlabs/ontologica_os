@@ -1,0 +1,34 @@
+{
+  "example_id": "blind_review_boundary_synthetic_v1",
+  "example_class": "synthetic_noncanonical_example",
+  "status": "hold_for_review",
+  "authority_ceiling": "candidate_only",
+  "information_barriers": {
+    "worker": "scoring_labels_and_judgments_withheld_in_proposed_design",
+    "reviewer": "identity_and_assignment_withheld_in_proposed_design",
+    "custodian": "separate_unassigned_role"
+  },
+  "observations": {
+    "actors_assigned": false,
+    "assignment_resolver_present": false,
+    "raw_evidence_present": false,
+    "judgments_locked": false,
+    "blinding_verified": false,
+    "effects_measured": false
+  },
+  "public_surface": {
+    "newly_authored_boundary_language": true,
+    "synthetic_examples_only": true,
+    "private_source_imported": false,
+    "private_join_keys_included": false,
+    "private_linkage_hashes_included": false,
+    "actual_results_included": false
+  },
+  "authority": {
+    "execution": false,
+    "unblinding": false,
+    "publication": false,
+    "visibility_change": false,
+    "private_runtime": false
+  }
+}

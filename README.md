@@ -127,6 +127,11 @@ See [docs/process-transparency-and-sanitization.md](docs/process-transparency-an
 and the synthetic, noncanonical
 [process transparency ledger](sample_outputs/reviews/process_transparency_sanitization_ledger.json).
 
+For the difference between confidential evaluation and a public explanatory
+surface, see [Blind Review and Public Disclosure](docs/blind-review-and-public-disclosure.md).
+It describes proposed information barriers only; it is not evidence of verified
+double-blinding or an authorization to publish real results.
+
 ## Recommended Read Order
 
 1. [LICENSE.md](LICENSE.md)
